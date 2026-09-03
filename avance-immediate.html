@@ -1127,3 +1127,16 @@ footer {
 
 </body>
 </html>
+
+
+<script>
+  function sendHeight() {
+    const height = document.body.scrollHeight || document.documentElement.scrollHeight;
+    // Envoie la hauteur exacte du contenu à l'élément parent Wix
+    window.parent.postMessage({ frameHeight: height }, '*');
+  }
+
+  // Envoie la hauteur dès le chargement et lors de tout redimensionnement
+  window.addEventListener('load', sendHeight);
+  window.addEventListener('resize', sendHeight);
+</script>
