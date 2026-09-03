@@ -1,0 +1,1129 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Avance Immédiate du Crédit d’Impôt — ÔME HOUSEKEEPING</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --violet: #7478B8;
+  --violet-dark: #565A98;
+  --violet-light: #F2F1FA;
+  --blue: #BFE0EB;
+  --mint: #D8EADF;
+  --mint-dark: #2A664B;
+  --lavender: #E8E3EE;
+  --offwhite: #F8F7F7;
+  --surface: #FFFFFF;
+  --dark: #333333;
+  --text-body: #4A4A4A;
+  --muted: #555555;
+  --border: #E6E3DD;
+  --radius-sm: 6px;
+  --radius-md: 14px;
+  --radius-lg: 24px;
+  --shadow-sm: 0 4px 16px rgba(0,0,0,0.03);
+  --shadow-md: 0 12px 32px rgba(116,120,184,0.12);
+  --shadow-lg: 0 20px 48px rgba(0,0,0,0.07);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; font-size: 16px; }
+body {
+  background-color: var(--offwhite);
+  color: var(--dark);
+  font-family: 'Montserrat', Arial, sans-serif;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+section[id] {
+  scroll-margin-top: 32px;
+}
+
+svg {
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Playfair Display', Georgia, serif;
+  color: var(--violet);
+  font-weight: 600;
+  line-height: 1.25;
+}
+h1 strong, h2 strong, h3 strong, h4 strong,
+h1 span, h2 span, h3 span, h4 span {
+  color: inherit;
+}
+
+a {
+  color: var(--violet);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  transition: all 0.2s ease;
+}
+a:hover { color: var(--violet-dark); }
+
+.container {
+  width: min(1120px, calc(100% - 48px));
+  margin: 0 auto;
+  padding: 48px 0 88px;
+  display: flex;
+  flex-direction: column;
+  gap: 72px;
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 28px;
+  border-bottom: 1px solid var(--lavender);
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.brand-group {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.brand-logo {
+  display: flex;
+  align-items: center;
+}
+.brand-logo img {
+  height: 64px;
+  width: auto;
+  max-width: 220px;
+  object-fit: contain;
+  display: block;
+}
+.brand-tagline {
+  font-size: 16px;
+  color: var(--violet);
+  font-weight: 500;
+  font-style: italic;
+  padding-left: 18px;
+  border-left: 2px solid var(--lavender);
+}
+.partner-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: var(--surface);
+  padding: 10px 20px;
+  border-radius: 40px;
+  border: 1px solid rgba(116, 120, 184, 0.25);
+  box-shadow: var(--shadow-sm);
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--violet);
+}
+.urssaf-mini-logo {
+  height: 24px !important;
+  width: 75px !important;
+  flex-shrink: 0 !important;
+}
+
+.pill-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.pill-violet { background: var(--lavender); color: var(--violet); }
+
+.hero {
+  display: flex;
+  flex-direction: row;
+  gap: 48px;
+  align-items: center;
+  background: linear-gradient(135deg, #FFFFFF 0%, #F5F3FA 100%);
+  padding: 52px;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  border: 1px solid rgba(116, 120, 184, 0.18);
+  position: relative;
+  overflow: hidden;
+}
+.hero-main {
+  flex: 1.2 1 360px;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+.hero-side {
+  flex: 0.9 1 300px;
+  display: flex;
+  flex-direction: column;
+}
+.hero-main h1 {
+  font-size: 2.65rem;
+  color: var(--violet);
+}
+.hero-main h1 span {
+  color: var(--violet);
+  display: block;
+}
+.hero-description {
+  font-size: 17px;
+  color: var(--text-body);
+  line-height: 1.75;
+}
+.hero-description strong {
+  color: var(--violet);
+  font-weight: 600;
+}
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 10px;
+}
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 14px 28px;
+  border-radius: var(--radius-sm);
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+.btn-primary {
+  background: var(--violet);
+  color: #FFFFFF;
+  box-shadow: 0 6px 18px rgba(116, 120, 184, 0.35);
+}
+.btn-primary:hover {
+  background: var(--violet-dark);
+  color: #FFFFFF;
+  transform: translateY(-2px);
+  text-decoration: none;
+  box-shadow: 0 8px 24px rgba(116, 120, 184, 0.45);
+}
+.btn-outline {
+  border-color: var(--violet);
+  color: var(--violet);
+  background: transparent;
+}
+.btn-outline:hover {
+  background: var(--violet-light);
+  color: var(--violet);
+  transform: translateY(-2px);
+  text-decoration: none;
+}
+
+.urssaf-official-card {
+  background: var(--surface);
+  padding: 32px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--lavender);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.urssaf-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--lavender);
+}
+.urssaf-badge-label {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--violet);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.hero-card-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.hero-card-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 15px;
+  color: var(--text-body);
+}
+.hero-card-list li strong {
+  color: var(--violet);
+}
+.check-icon {
+  width: 22px !important;
+  height: 22px !important;
+  min-width: 22px !important;
+  max-width: 22px !important;
+  background: var(--mint);
+  color: var(--mint-dark);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-weight: bold;
+  font-size: 13px;
+  flex-shrink: 0 !important;
+  margin-top: 2px;
+}
+
+/* 🎯 Section Header Subtitles - Strictly Set to 16px */
+.section-header {
+  text-align: center;
+  max-width: 780px;
+  margin: 0 auto 36px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+.section-header h2 {
+  font-size: 2.1rem;
+  position: relative;
+  padding-bottom: 12px;
+  color: var(--violet);
+}
+.section-header h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 50%;
+  transform: translateX(-50%);
+  width: 64px; height: 3px;
+  background: var(--violet);
+  border-radius: 2px;
+}
+.section-header p {
+  color: var(--muted);
+  font-size: 16px !important;
+  font-weight: 500;
+  line-height: 1.6;
+}
+
+.flex-grid-2 {
+  display: flex; flex-direction: row; gap: 24px; flex-wrap: wrap;
+}
+.flex-grid-2 > * { flex: 1 1 320px; }
+
+.flex-grid-3 {
+  display: flex; flex-direction: row; gap: 24px; flex-wrap: wrap;
+}
+.flex-grid-3 > * { flex: 1 1 280px; }
+
+.flex-grid-4 {
+  display: flex; flex-direction: row; gap: 20px; flex-wrap: wrap;
+}
+.flex-grid-4 > * { flex: 1 1 220px; }
+
+/* Comparison Cards */
+.comp-card {
+  padding: 32px;
+  border-radius: var(--radius-md);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: relative;
+}
+.comp-card.active-option {
+  border: 2px solid var(--violet);
+  background: linear-gradient(180deg, #FFFFFF 0%, #F9F8FD 100%);
+  box-shadow: var(--shadow-md);
+}
+.comp-badge {
+  position: absolute;
+  top: -14px; right: 24px;
+  background: var(--violet);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 4px 16px;
+  border-radius: 14px;
+  text-transform: uppercase;
+}
+.comp-card h3 { font-size: 1.35rem; color: var(--violet); }
+.comp-card-subtitle { font-size: 16px !important; color: var(--muted); }
+.comp-list { list-style: none; display: flex; flex-direction: column; gap: 14px; }
+.comp-list li { display: flex; align-items: flex-start; gap: 12px; font-size: 15px; color: var(--text-body); }
+.comp-list li strong { color: var(--violet); }
+.comp-icon {
+  width: 22px !important;
+  height: 22px !important;
+  min-width: 22px !important;
+  max-width: 22px !important;
+  flex-shrink: 0 !important;
+  margin-top: 2px;
+}
+
+/* Simulator Section */
+.simulator-container {
+  background: var(--surface);
+  border-radius: var(--radius-lg);
+  padding: 40px;
+  border: 1px solid var(--lavender);
+  box-shadow: var(--shadow-md);
+  display: flex;
+  flex-direction: row;
+  gap: 48px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.sim-controls {
+  flex: 1 1 320px;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+.sim-group { display: flex; flex-direction: column; gap: 12px; }
+.sim-label { font-weight: 600; font-size: 16px; color: var(--violet); }
+.sim-input-row { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
+.sim-slider {
+  flex: 1 1 180px;
+  height: 8px;
+  border-radius: 4px;
+  background: var(--lavender);
+  outline: none;
+  accent-color: var(--violet);
+  cursor: pointer;
+}
+.sim-number-input {
+  width: 115px;
+  padding: 10px 14px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  font-family: inherit;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--violet);
+  text-align: right;
+  background-color: #F8F7F7;
+}
+.sim-results {
+  flex: 1 1 320px;
+  background-color: #F8F7F7;
+  padding: 32px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.sim-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border);
+  font-size: 16px;
+  color: var(--text-body);
+}
+.sim-row.total {
+  border-bottom: none;
+  padding-top: 6px;
+  padding-bottom: 0;
+}
+.sim-row.total .val {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 2.3rem;
+  font-weight: 700;
+  color: var(--violet);
+}
+
+.portal-mockup-card {
+  background: var(--surface);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--lavender);
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.portal-header {
+  background: linear-gradient(90deg, #1C244B 0%, #2A366E 100%);
+  color: #FFFFFF;
+  padding: 16px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.portal-logo-group {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.portal-badge-text {
+  font-size: 15px;
+  font-weight: 600;
+  color: #BFE0EB;
+}
+.portal-body {
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background: #FAF9FC;
+}
+.portal-notification {
+  background: #FFFFFF;
+  border: 1px solid var(--lavender);
+  border-left: 5px solid var(--violet);
+  border-radius: var(--radius-md);
+  padding: 20px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.portal-notif-info h4 { font-size: 1.1rem; color: var(--violet); }
+.portal-notif-info p { font-size: 15px; color: var(--muted); }
+.portal-status-pill {
+  background: var(--mint);
+  color: var(--mint-dark);
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.process-step {
+  background: var(--surface);
+  padding: 28px 22px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  transition: all 0.25s ease;
+}
+.process-step:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--lavender);
+}
+.step-number {
+  width: 38px; height: 38px;
+  border-radius: 50%;
+  background: var(--violet);
+  color: #fff;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.15rem;
+  font-weight: 600;
+  display: flex; align-items: center; justify-content: center;
+}
+.process-step h3 { font-size: 1.18rem; color: var(--violet); }
+.process-step p { font-size: 15px; color: var(--text-body); line-height: 1.6; }
+.process-step p a { color: var(--violet); font-weight: 600; }
+
+.notice-box {
+  background: var(--lavender);
+  border-left: 5px solid var(--violet);
+  padding: 28px 32px;
+  border-radius: var(--radius-md);
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: flex-start;
+  box-shadow: var(--shadow-sm);
+}
+.notice-icon {
+  width: 32px !important;
+  height: 32px !important;
+  min-width: 32px !important;
+  max-width: 32px !important;
+  color: var(--violet);
+  flex-shrink: 0 !important;
+  margin-top: 2px;
+}
+.notice-content { display: flex; flex-direction: column; gap: 8px; }
+.notice-content h4 { font-size: 1.18rem; color: var(--violet); }
+.notice-content p { font-size: 16px; color: var(--dark); line-height: 1.65; }
+
+.eligibility-card {
+  background: var(--surface);
+  padding: 32px 24px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.eligibility-card.highlight {
+  background: linear-gradient(180deg, #F0F8FB 0%, #FFFFFF 100%);
+  border: 1px solid var(--blue);
+}
+.eligibility-card h3 {
+  font-size: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--violet);
+}
+.eligibility-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.eligibility-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 15px;
+  color: var(--text-body);
+}
+
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  max-width: 860px;
+  margin: 0 auto;
+  width: 100%;
+}
+.faq-item {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+.faq-item[open] { border-color: var(--violet); }
+.faq-summary {
+  padding: 20px 24px;
+  font-weight: 600;
+  font-size: 16px;
+  color: var(--violet);
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  list-style: none;
+  user-select: none;
+}
+.faq-summary::-webkit-details-marker { display: none; }
+.faq-icon {
+  width: 20px !important;
+  height: 20px !important;
+  min-width: 20px !important;
+  max-width: 20px !important;
+  min-height: 20px !important;
+  max-height: 20px !important;
+  flex-shrink: 0 !important;
+  transition: transform 0.25s ease;
+  color: var(--violet);
+}
+.faq-item[open] .faq-icon { transform: rotate(180deg); }
+.faq-body {
+  padding: 0 24px 20px 24px;
+  font-size: 15px;
+  color: var(--text-body);
+  border-top: 1px solid transparent;
+}
+.faq-item[open] .faq-body { border-top-color: var(--lavender); padding-top: 14px; }
+.faq-body strong { color: var(--violet); }
+
+.cta-card {
+  background: linear-gradient(135deg, var(--violet) 0%, var(--violet-dark) 100%);
+  color: #FFFFFF;
+  padding: 48px 24px;
+  border-radius: var(--radius-lg);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  box-shadow: var(--shadow-lg);
+}
+.cta-card h2 { color: #FFFFFF; font-size: 2.2rem; }
+.cta-card p { color: #F0EDF5; max-width: 620px; font-size: 16px; }
+
+footer {
+  padding: 26px 24px;
+  background: var(--lavender);
+  border-radius: var(--radius-sm);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  font-size: 15px;
+  color: var(--dark);
+}
+.footer-links { display: flex; gap: 18px; flex-wrap: wrap; }
+
+@media (max-width: 860px) {
+  .container { width: calc(100% - 36px); padding: 32px 0 56px; gap: 48px; }
+  .hero { flex-direction: column; padding: 36px 24px; gap: 32px; }
+  .hero-main, .hero-side { flex: 1 1 100%; }
+  .hero-main h1 { font-size: 2.25rem; }
+  .section-header h2 { font-size: 1.8rem; }
+  .simulator-container { flex-direction: column; padding: 30px 20px; gap: 28px; }
+  .sim-controls, .sim-results { flex: 1 1 100%; width: 100%; }
+  .flex-grid-4 > * { flex: 1 1 calc(50% - 10px); }
+  .notice-box { padding: 22px 20px; }
+}
+
+@media (max-width: 540px) {
+  .container { width: calc(100% - 24px); padding: 20px 0 40px; gap: 40px; }
+  .header-nav { flex-direction: column; align-items: flex-start; gap: 14px; }
+  .brand-group { flex-direction: column; align-items: flex-start; gap: 10px; }
+  .brand-tagline { border-left: 0; padding-left: 0; }
+  .hero-main h1 { font-size: 1.85rem; }
+  .hero-actions { flex-direction: column; width: 100%; }
+  .btn { width: 100%; }
+  .flex-grid-2 > *, .flex-grid-3 > *, .flex-grid-4 > * { flex: 1 1 100%; }
+  .sim-input-row { flex-direction: column; align-items: stretch; gap: 10px; }
+  .sim-number-input { width: 100%; text-align: center; }
+  footer { flex-direction: column; align-items: flex-start; gap: 12px; }
+}
+</style>
+</head>
+<body>
+
+<main class="container">
+  
+  <!-- Header / Nav -->
+  <header class="header-nav">
+    <div class="brand-group">
+      <a href="https://www.ome-housekeeping.fr" title="Accueil Ôme Housekeeping">
+        <div class="brand-logo">
+          <img src="https://static.wixstatic.com/media/c9d93b_556e9da936e94b0990fd71717e6693f1~mv2.webp" alt="ÔME HOUSEKEEPING">
+        </div>
+      </a>
+      <span class="brand-tagline">Votre sérénité intérieure</span>
+    </div>
+
+    <!-- Official Urssaf & DGFiP Co-Brand Badge -->
+    <div class="partner-badge">
+      <svg class="urssaf-mini-logo" width="75" height="24" viewBox="0 0 100 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="100" height="32" rx="4" fill="#7478B8"/>
+        <text x="12" y="21" font-family="'Montserrat', sans-serif" font-weight="700" font-size="14" fill="#FFFFFF">Urssaf</text>
+        <circle cx="82" cy="16" r="6" fill="#BFE0EB"/>
+      </svg>
+      <span>Dispositif officiel Urssaf &amp; DGFiP</span>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-main">
+      <div>
+        <span class="pill-badge pill-violet">Service à la Personne (SAP) · Optionnel &amp; Gratuit</span>
+      </div>
+      <h1>L’Avance Immédiate <span>de Crédit d’Impôt</span></h1>
+      <p class="hero-description">
+        Ne faites plus d’avance de trésorerie ! Grâce au dispositif conjoint de l’<strong>Urssaf</strong> et de la <strong>Direction générale des Finances publiques (DGFiP)</strong>, bénéficiez immédiatement de vos <strong>50&nbsp;% de crédit d’impôt</strong> lors de chaque prestation de ménage ÔME HOUSEKEEPING.
+      </p>
+      <div class="hero-actions">
+        <a href="#activer" class="btn btn-primary">Activer l'avance immédiate</a>
+        <a href="#simulateur" class="btn btn-outline">Simuler mon reste à charge</a>
+      </div>
+    </div>
+
+    <div class="hero-side">
+      <div class="urssaf-official-card">
+        <div class="urssaf-card-header">
+          <span class="urssaf-badge-label">Garantie Urssaf</span>
+          <svg width="22" height="22" fill="none" stroke="var(--violet)" stroke-width="2" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+        </div>
+        <ul class="hero-card-list">
+          <li>
+            <span class="check-icon">✓</span>
+            <span><strong>Déduction immédiate :</strong> Vous ne prélevez que vos 50&nbsp;% de reste à charge.</span>
+          </li>
+          <li>
+            <span class="check-icon">✓</span>
+            <span><strong>Automatique :</strong> Aucune déclaration annuelle supplémentaire pour vos prestations.</span>
+          </li>
+          <li>
+            <span class="check-icon">✓</span>
+            <span><strong>Suivi en temps réel :</strong> Espace sécurisé dédié sur <strong>particulier.urssaf.fr</strong>.</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Comparison Section -->
+  <section>
+    <div class="section-header">
+      <h2>Pourquoi utiliser l’Avance Immédiate&nbsp;?</h2>
+      <p>Comparez le fonctionnement traditionnel et la nouvelle solution proposée par l'Urssaf.</p>
+    </div>
+
+    <div class="flex-grid-2">
+      <div class="comp-card">
+        <h3>Fonctionnement Classique</h3>
+        <p class="comp-card-subtitle">Sans l'Avance Immédiate</p>
+        <ul class="comp-list">
+          <li>
+            <svg class="comp-icon" width="22" height="22" fill="none" stroke="#D32F2F" stroke-width="2" viewBox="0 0 24 24"><path d="M6 18L18 6M6 6l12 12"/></svg>
+            <span>Vous réglez <strong>100&nbsp;% de la facture</strong> chaque mois à ÔME HOUSEKEEPING.</span>
+          </li>
+          <li>
+            <svg class="comp-icon" width="22" height="22" fill="none" stroke="#D32F2F" stroke-width="2" viewBox="0 0 24 24"><path d="M6 18L18 6M6 6l12 12"/></svg>
+            <span>Vous devez attendre votre déclaration de revenus <strong>l'année suivante</strong> (jusqu'à 15 mois de délai).</span>
+          </li>
+          <li>
+            <svg class="comp-icon" width="22" height="22" fill="none" stroke="#D32F2F" stroke-width="2" viewBox="0 0 24 24"><path d="M6 18L18 6M6 6l12 12"/></svg>
+            <span>Avance de trésorerie importante tout au long de l'année.</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="comp-card active-option">
+        <span class="comp-badge">Recommandé</span>
+        <h3>Avec l’Avance Immédiate ÔME</h3>
+        <p class="comp-card-subtitle" style="color: var(--violet);">Service optionnel et 100% gratuit</p>
+        <ul class="comp-list">
+          <li>
+            <svg class="comp-icon" width="22" height="22" fill="none" stroke="#2A664B" stroke-width="2" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>
+            <span>Vous ne réglez que votre <strong>reste à charge de 50&nbsp;%</strong> dès l'émission de la facture.</span>
+          </li>
+          <li>
+            <svg class="comp-icon" width="22" height="22" fill="none" stroke="#2A664B" stroke-width="2" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>
+            <span><strong>Aucune avance de trésorerie</strong> : le crédit d'impôt est déduit en temps réel.</span>
+          </li>
+          <li>
+            <svg class="comp-icon" width="22" height="22" fill="none" stroke="#2A664B" stroke-width="2" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>
+            <span>L’Urssaf effectue le prélèvement direct du reste à charge et vous notifie par e-mail ou SMS.</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Simulator Section -->
+  <section id="simulateur">
+    <div class="section-header">
+      <h2>Simulateur de Reste à Charge</h2>
+      <p>Calculez instantanément votre économie directe après application de l'Avance Immédiate.</p>
+    </div>
+
+    <div class="simulator-container">
+      <div class="sim-controls">
+        <div class="sim-group">
+          <label for="amountSlider" class="sim-label">Montant mensuel de vos prestations de ménage :</label>
+          <div class="sim-input-row">
+            <input type="range" id="amountSlider" class="sim-slider" min="40" max="1000" step="10" value="200">
+            <input type="number" id="amountNumber" class="sim-number-input" value="200" min="40" max="1000"> <span style="font-weight: 700; color: var(--violet);">€</span>
+          </div>
+        </div>
+        <p style="font-size: 15px; color: var(--muted);">
+          * Exemple basé sur une prestation régulière d'entretien de la maison.
+        </p>
+      </div>
+
+      <div class="sim-results">
+        <div class="sim-row">
+          <span>Montant total facturé par ÔME :</span>
+          <span id="factureVal" style="font-weight: 600;">200,00 €</span>
+        </div>
+        <div class="sim-row" style="color: var(--mint-dark);">
+          <span>Prise en charge Urssaf (50&nbsp;%) :</span>
+          <span id="urssafVal" style="font-weight: 600;">- 100,00 €</span>
+        </div>
+        <div class="sim-row total">
+          <span>Vous ne payez que :</span>
+          <span id="resteVal" class="val">100,00 €</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- URSSAF Portal Interface Visual Mockup Card -->
+  <section>
+    <div class="section-header">
+      <h2>Aperçu de votre espace Urssaf Particulier</h2>
+      <p>Voici l'interface officielle sur laquelle vous validez vos demandes de paiement.</p>
+    </div>
+
+    <div class="portal-mockup-card">
+      <div class="portal-header">
+        <div class="portal-logo-group">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="#FFFFFF"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+          <span class="portal-badge-text">URSSAF · particulier.urssaf.fr</span>
+        </div>
+        <span style="font-size: 15px; opacity: 0.9;">Espace Sécurisé Client</span>
+      </div>
+      <div class="portal-body">
+        <div class="portal-notification">
+          <div class="portal-notif-info">
+            <h4>Nouvelle demande de paiement — ÔME HOUSEKEEPING</h4>
+            <p>Prestation d'entretien de la maison · Montant total : 200,00 € · <strong>Reste à charge : 100,00 €</strong></p>
+          </div>
+          <span class="portal-status-pill">En attente de validation (48h)</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Activation Steps Flexbox -->
+  <section id="activer">
+    <div class="section-header">
+      <h2>Comment activer le service&nbsp;?</h2>
+      <p>Un parcours 100&nbsp;% sécurisé et rapide en 4 étapes simples.</p>
+    </div>
+
+    <div class="flex-grid-4">
+      <article class="process-step">
+        <div class="step-number">1</div>
+        <h3>Votre Accord</h3>
+        <p>ÔME HOUSEKEEPING enregistre vos données d’état civil et numéro fiscal sur le portail Urssaf, uniquement avec votre consentement.</p>
+      </article>
+
+      <article class="process-step">
+        <div class="step-number">2</div>
+        <h3>Contrôle Fiscal</h3>
+        <p>L’administration fiscale vérifie l’éligibilité de votre foyer au crédit d’impôt Services à la Personne (SAP).</p>
+      </article>
+
+      <article class="process-step">
+        <div class="step-number">3</div>
+        <h3>Validation e-mail</h3>
+        <p>Vous recevez un e-mail de l’Urssaf vous invitant à activer votre compte sur <a href="https://www.particulier.urssaf.fr" target="_blank" rel="noopener">particulier.urssaf.fr</a> (lien valable 7 jours).</p>
+      </article>
+
+      <article class="process-step">
+        <div class="step-number">4</div>
+        <h3>C’est prêt !</h3>
+        <p>Votre compte est configuré. Vos prochaines demandes de paiement intégreront automatiquement la déduction immédiate de 50&nbsp;%.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- Routine Payment Steps Flexbox -->
+  <section>
+    <div class="section-header">
+      <h2>Le déroulement après chaque prestation</h2>
+      <p>Voici comment sont traitées vos factures mensuelles au fil de l'eau.</p>
+    </div>
+
+    <div class="flex-grid-4">
+      <article class="process-step">
+        <div class="step-number">1</div>
+        <h3>Émission de la demande</h3>
+        <p>Après réalisation de la prestation, ÔME transmet la demande de paiement à l'Urssaf pour le montant global.</p>
+      </article>
+
+      <article class="process-step">
+        <div class="step-number">2</div>
+        <h3>Notification Urssaf</h3>
+        <p>Vous êtes immédiatement averti(e) par e-mail ou SMS de la mise à disposition de la demande de paiement.</p>
+      </article>
+
+      <article class="process-step">
+        <div class="step-number">3</div>
+        <h3>Délai de 48 heures</h3>
+        <p>Vous avez 48h pour valider ou contester sur votre espace Urssaf. Sans action de votre part, la demande est validée automatiquement.</p>
+      </article>
+
+      <article class="process-step">
+        <div class="step-number">4</div>
+        <h3>Prélèvement à J+2</h3>
+        <p>L'Urssaf prélève uniquement vos 50&nbsp;% de reste à charge sur votre compte bancaire et reverse l'intégralité à ÔME.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- Official URSSAF Notice Box -->
+  <section>
+    <div class="notice-box">
+      <svg class="notice-icon" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+      <div class="notice-content">
+        <h4>Information importante concernant vos prestations</h4>
+        <p>
+          L’Urssaf est l’émetteur du service de l’Avance Immédiate. En cas de question relative à l’exécution de votre prestation de ménage, à la modification d’un rendez-vous ou au contenu de votre facture, <strong>votre interlocuteur unique et privilégié reste ÔME HOUSEKEEPING</strong>.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Eligibility Section Flexbox -->
+  <section>
+    <div class="section-header">
+      <h2>Conditions d'éligibilité</h2>
+      <p>Vérifiez si vous pouvez bénéficier du dispositif d'Avance Immédiate.</p>
+    </div>
+
+    <div class="flex-grid-3">
+      <div class="eligibility-card">
+        <h3>
+          <svg width="24" height="24" fill="none" stroke="var(--violet)" stroke-width="2" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          Conditions Urssaf
+        </h3>
+        <ul class="eligibility-list">
+          <li><span>•</span> Être domicilié fiscalement en France.</li>
+          <li><span>•</span> Disposer d'un numéro fiscal personnel.</li>
+          <li><span>•</span> Avoir déjà effectué au moins une déclaration de revenus (N-1 ou N-2).</li>
+          <li><span>•</span> Être le seul déclarant du foyer fiscal à recourir à ce service tiers.</li>
+        </ul>
+      </div>
+
+      <div class="eligibility-card">
+        <h3>
+          <svg width="24" height="24" fill="none" stroke="#D32F2F" stroke-width="2" viewBox="0 0 24 24"><path d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          Exclusions légales
+        </h3>
+        <ul class="eligibility-list">
+          <li><span>•</span> Bénéficiaires d'aides sociales (APA, PCH).</li>
+          <li><span>•</span> Garde d'enfant de moins de 6 ans (CMG).</li>
+          <li><span>•</span> Réglement par Titres CESU préfinancés.</li>
+        </ul>
+      </div>
+
+      <div class="eligibility-card highlight">
+        <h3>
+          <svg width="24" height="24" fill="none" stroke="var(--mint-dark)" stroke-width="2" viewBox="0 0 24 24"><path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+          Chez ÔME HOUSEKEEPING
+        </h3>
+        <p style="font-size: 15px; color: var(--text-body);">
+          L'Avance Immédiate s'applique à l'ensemble de nos prestations d'<strong>entretien de la maison et travaux ménagers</strong> éligibles aux Services à la Personne (SAP).
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section>
+    <div class="section-header">
+      <h2>Foire Aux Questions (FAQ)</h2>
+      <p>Toutes les réponses à vos questions sur l'Avance Immédiate.</p>
+    </div>
+
+    <div class="faq-list">
+      <details class="faq-item" open>
+        <summary class="faq-summary">
+          <span>Le service d'Avance Immédiate est-il obligatoire&nbsp;?</span>
+          <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 9l-7 7-7-7"/></svg>
+        </summary>
+        <div class="faq-body">
+          <p>Non, ce service est entièrement <strong>optionnel et 100&nbsp;% gratuit</strong>. Si vous ne souhaitez pas l'activer, vous continuerez de bénéficier de votre crédit d’impôt de 50&nbsp;% de manière classique lors de votre déclaration de revenus annuelle.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-summary">
+          <span>Comment puis-je suivre mon solde et mes plafonds de crédit d'impôt&nbsp;?</span>
+          <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 9l-7 7-7-7"/></svg>
+        </summary>
+        <div class="faq-body">
+          <p>Vous disposez d'un espace personnel sécurisé sur <a href="https://www.particulier.urssaf.fr" target="_blank" rel="noopener">particulier.urssaf.fr</a>. Vous pouvez y consulter l'historique de vos demandes de paiement et le solde disponible sur votre plafond annuel de crédit d'impôt (12 000&nbsp;€ par an et par foyer fiscal, soit 6 000&nbsp;€ d'avance max, selon l'article 199 sexdecies du CGI).</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-summary">
+          <span>Que se passe-t-il si je ne valide pas la demande dans le délai de 48 heures&nbsp;?</span>
+          <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 9l-7 7-7-7"/></svg>
+        </summary>
+        <div class="faq-body">
+          <p>Si vous n'intervenez pas sur votre compte Urssaf dans le délai imparti de 48 heures suivant la notification, la demande de paiement est <strong>validée automatiquement</strong>. Le prélèvement de votre reste à charge sera exécuté 2 jours ouvrés plus tard.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-summary">
+          <span>Que faire si je conteste le montant d'une facture&nbsp;?</span>
+          <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 9l-7 7-7-7"/></svg>
+        </summary>
+        <div class="faq-body">
+          <p>Vous pouvez contester la demande directement depuis votre espace <a href="https://www.particulier.urssaf.fr" target="_blank" rel="noopener">particulier.urssaf.fr</a> dans le délai de 48 heures. Le prélèvement sera alors suspendu. Vous devrez contacter ÔME HOUSEKEEPING afin que nous régularisions ou émettions une nouvelle demande conforme.</p>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-card">
+    <h2>Prêt(e) à alléger votre budget ménage&nbsp;?</h2>
+    <p>Activez l'Avance Immédiate en quelques clics auprès de notre équipe et profitez immédiatement de votre crédit d'impôt de 50&nbsp;%.</p>
+    <div style="display: flex; gap: 16px; flex-wrap: wrap; justify-content: center;">
+      <a href="https://www.ome-housekeeping.fr/contact" class="btn btn-primary" style="background: var(--mint); color: var(--mint-dark);">Demander l'activation</a>
+      <a href="mailto:contact@ome-housekeeping.fr" class="btn btn-outline" style="border-color: #fff; color: #fff;">Nous contacter par e-mail</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div>
+      <strong>ÔME HOUSEKEEPING</strong> · Service de Ménage &amp; Entretien à Domicile (Bayonne, Pays Basque)
+    </div>
+    <div class="footer-links">
+      <a href="mailto:contact@ome-housekeeping.fr">contact@ome-housekeeping.fr</a>
+      <span>·</span>
+      <a href="https://www.urssaf.fr/accueil/services/services-particuliers/service-avance-immediate.html" target="_blank" rel="noopener">Portail Officiel Urssaf</a>
+    </div>
+  </footer>
+
+</main>
+
+<script>
+// Interactive Smooth Scroll & Simulator Script
+(function() {
+  document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+    anchor.addEventListener('click', function(e) {
+      const targetId = this.getAttribute('href');
+      if (targetId && targetId !== '#') {
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+          e.preventDefault();
+          targetElement.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      }
+    });
+  });
+
+  const slider = document.getElementById('amountSlider');
+  const number = document.getElementById('amountNumber');
+  const factureVal = document.getElementById('factureVal');
+  const urssafVal = document.getElementById('urssafVal');
+  const resteVal = document.getElementById('resteVal');
+
+  function updateValues(val) {
+    const numVal = parseFloat(val) || 0;
+    const urssaf = numVal * 0.5;
+    const reste = numVal * 0.5;
+
+    factureVal.textContent = numVal.toFixed(2).replace('.', ',') + ' €';
+    urssafVal.textContent = '- ' + urssaf.toFixed(2).replace('.', ',') + ' €';
+    resteVal.textContent = reste.toFixed(2).replace('.', ',') + ' €';
+  }
+
+  if (slider && number) {
+    slider.addEventListener('input', function(e) {
+      number.value = e.target.value;
+      updateValues(e.target.value);
+    });
+
+    number.addEventListener('input', function(e) {
+      slider.value = e.target.value;
+      updateValues(e.target.value);
+    });
+  }
+})();
+</script>
+
+</body>
+</html>
