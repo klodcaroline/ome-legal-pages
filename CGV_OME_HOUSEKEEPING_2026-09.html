@@ -3,9 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
   <title>Conditions Générales de Vente — ÔME HOUSEKEEPING</title>
-
+  <meta name="description" content="Conditions Générales de Vente d'ÔME HOUSEKEEPING — services à la personne et prestations professionnelles au Pays Basque et Sud des Landes.">
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
 
@@ -20,13 +19,8 @@
       --ome-button-height: 45px;
     }
 
-    * {
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
 
     body {
       margin: 0;
@@ -43,13 +37,9 @@
       padding: 56px 48px 80px;
     }
 
-    /* =========================
-       IDENTITÉ ÔME
-       ========================= */
-
     .brand {
       padding: 0 0 24px;
-      margin: 0 0 54px;
+      margin: 0 0 36px;
       border-bottom: 1px solid var(--ome-border);
     }
 
@@ -58,11 +48,6 @@
       flex-direction: column;
       align-items: flex-start;
       gap: 10px;
-    }
-
-    .brand-logo {
-      display: flex;
-      align-items: center;
     }
 
     .brand-logo img {
@@ -77,14 +62,7 @@
       color: var(--ome-text-secondary);
     }
 
-    /* =========================
-       TYPOGRAPHIE
-       ========================= */
-
-    h1,
-    h2,
-    h3,
-    h4 {
+    h1, h2, h3, h4 {
       font-family: 'Montserrat', Arial, sans-serif;
       color: var(--ome-primary);
       font-weight: 500;
@@ -119,22 +97,17 @@
     .meta {
       font-size: 14px;
       color: var(--ome-text-secondary);
-      margin-bottom: 42px;
+      margin-bottom: 28px;
     }
 
-    p {
-      margin: 0 0 16px;
-    }
+    p { margin: 0 0 16px; }
 
-    ul,
-    ol {
+    ul, ol {
       margin: 0 0 18px;
       padding-left: 24px;
     }
 
-    li {
-      margin: 5px 0;
-    }
+    li { margin: 5px 0; }
 
     a {
       color: var(--ome-text-secondary);
@@ -142,9 +115,31 @@
       text-underline-offset: 3px;
     }
 
-    /* =========================
-       TABLEAUX
-       ========================= */
+    .toc {
+      background: #fff;
+      border: 1px solid var(--ome-border);
+      border-radius: var(--ome-radius);
+      padding: 22px 26px;
+      margin: 0 0 42px;
+    }
+
+    .toc h2 {
+      font-size: 18px;
+      margin: 0 0 12px;
+      padding: 0;
+      border: 0;
+      color: var(--ome-text);
+    }
+
+    .toc ol {
+      columns: 2;
+      column-gap: 32px;
+      margin: 0;
+      padding-left: 20px;
+    }
+
+    .toc a { color: var(--ome-primary); text-decoration: none; }
+    .toc a:hover { text-decoration: underline; }
 
     table {
       width: 100%;
@@ -157,8 +152,7 @@
       overflow: hidden;
     }
 
-    th,
-    td {
+    th, td {
       padding: 12px 14px;
       border-right: 1px solid var(--ome-border);
       border-bottom: 1px solid var(--ome-border);
@@ -166,23 +160,9 @@
       vertical-align: top;
     }
 
-    th:last-child,
-    td:last-child {
-      border-right: 0;
-    }
-
-    tr:last-child td {
-      border-bottom: 0;
-    }
-
-    th {
-      background: var(--ome-accent);
-      font-weight: 600;
-    }
-
-    /* =========================
-       BLOCS D'INFORMATION
-       ========================= */
+    th:last-child, td:last-child { border-right: 0; }
+    tr:last-child td { border-bottom: 0; }
+    th { background: var(--ome-accent); font-weight: 600; }
 
     .info {
       padding: 18px 20px;
@@ -192,25 +172,14 @@
       margin: 22px 0;
     }
 
-    /* =========================
-       BOUTONS
-       ========================= */
-
-    .button,
-    .cta,
-    button {
-      height: var(--ome-button-height);
-      min-height: var(--ome-button-height);
-      border-radius: var(--ome-radius);
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 0 18px;
+    .communes {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px 40px;
+      margin: 0 0 18px;
+      padding: 0;
+      list-style-position: inside;
     }
-
-    /* =========================
-       FOOTER
-       ========================= */
 
     footer {
       margin-top: 64px;
@@ -220,104 +189,72 @@
       color: var(--ome-text-secondary);
     }
 
-    /* =========================
-       MOBILE
-       ========================= */
-
     @media (max-width: 700px) {
+      .legal-page { padding: 36px 20px 56px; }
+      h1 { font-size: 34px; }
+      h2 { font-size: 25px; }
+      h3 { font-size: 19px; }
+      .toc ol, .communes { columns: 1; grid-template-columns: 1fr; }
+      table { display: block; overflow-x: auto; }
+    }
 
-      .legal-page {
-        padding: 36px 20px 56px;
-      }
-
-      .brand {
-        display: block;
-      }
-
-      .brand-tagline {
-        margin-top: 0;
-      }
-
-      h1 {
-        font-size: 34px;
-      }
-
-      h2 {
-        font-size: 25px;
-      }
-
-      h3 {
-        font-size: 19px;
-      }
-
-      table {
-        display: block;
-        overflow-x: auto;
-        white-space: normal;
-      }
+    @media print {
+      body { background: #fff; }
+      .toc { break-after: page; }
+      a { text-decoration: none; color: inherit; }
     }
   </style>
 </head>
-
 <body>
-
   <main class="legal-page">
-
-    <!-- =========================
-         EN-TÊTE
-         ========================= -->
-
     <header class="brand">
-
       <div class="brand-identity">
-
         <div class="brand-logo">
           <img
             src="https://static.wixstatic.com/media/c9d93b_556e9da936e94b0990fd71717e6693f1~mv2.webp"
-            alt="ÔME HOUSEKEEPING"
-          >
+            alt="ÔME HOUSEKEEPING">
         </div>
-
-        <div class="brand-tagline">
-          Votre sérénité intérieure
-        </div>
-
+        <div class="brand-tagline">Votre sérénité intérieure</div>
       </div>
-
     </header>
 
-
-    <!-- =========================
-         TITRE
-         ========================= -->
-
     <h1>Conditions Générales de Vente</h1>
+    <div class="meta">Dernière mise à jour : 6 septembre 2026</div>
 
-    <div class="meta">
-      Dernière mise à jour : septembre 2026
-    </div>
+    <nav class="toc" aria-label="Sommaire">
+      <h2>Sommaire</h2>
+      <ol>
+        <li><a href="#art1">Identification du prestataire</a></li>
+        <li><a href="#art2">Objet et champ d'application</a></li>
+        <li><a href="#art3">Prestations proposées</a></li>
+        <li><a href="#art4">Zone d'intervention</a></li>
+        <li><a href="#art5">Devis et formation du contrat</a></li>
+        <li><a href="#art6">Tarifs</a></li>
+        <li><a href="#art7">Modalités de paiement</a></li>
+        <li><a href="#art8">Conditions d'exécution</a></li>
+        <li><a href="#art9">Annulation et report</a></li>
+        <li><a href="#art10">Abonnements et contrats récurrents</a></li>
+        <li><a href="#art11">Responsabilité</a></li>
+        <li><a href="#art12">Discrétion et confidentialité</a></li>
+        <li><a href="#art13">Droit de rétractation</a></li>
+        <li><a href="#art14">Médiation et litiges</a></li>
+        <li><a href="#art15">Droit applicable</a></li>
+        <li><a href="#art16">Dispositions diverses</a></li>
+      </ol>
+    </nav>
 
-
-    <!-- =========================
-         ARTICLE 1
-         ========================= -->
-
-    <h2>Article 1 - Identification du prestataire</h2>
-
+    <h2 id="art1">Article 1 — Identification du prestataire</h2>
     <p>
       <strong>ÔME HOUSEKEEPING</strong><br>
-      Entreprise individuelle - Auto-entrepreneur<br>
+      Entreprise individuelle — Auto-entrepreneur<br>
       Activité : Services à la Personne (SAP)<br>
       APE : 8121Z<br>
       SIRET : 51930018000048<br>
-      Siège social : Bayonne, Pays Basque, France<br>
-      Email :
-      <a href="mailto:contact@ome-housekeeping.fr">
-        contact@ome-housekeeping.fr
-      </a><br>
-      Déclaration SAP/Nova : 519300180
+      Siège social : 29 allée Docteur Robert Lafon, 64100 Bayonne, Pays Basque, France<br>
+      Email : <a href="mailto:contact@ome-housekeeping.fr">contact@ome-housekeeping.fr</a><br>
+      Déclaration SAP/Nova : 519300180<br>
+      Assurance RC Pro : Acheel — contrat n° RCP_00000000000000063523 (attestation en vigueur)
     </p>
-
     <p>
       Les présentes Conditions Générales de Vente (ci-après « CGV »)
       régissent l'ensemble des prestations de services proposées par
@@ -326,7 +263,6 @@
       locations de courte durée, et toute autre personne morale ou physique
       agissant dans le cadre de son activité professionnelle).
     </p>
-
     <p>
       Toute commande de prestation implique l'acceptation pleine et entière
       des présentes CGV, qui prévalent sur tout autre document du client.
@@ -334,13 +270,7 @@
       les CGV applicables sont celles en vigueur à la date de la commande.
     </p>
 
-
-    <!-- =========================
-         ARTICLE 2
-         ========================= -->
-
-    <h2>Article 2 - Objet et champ d'application</h2>
-
+    <h2 id="art2">Article 2 — Objet et champ d'application</h2>
     <p>
       Les présentes CGV définissent les conditions dans lesquelles
       ÔME HOUSEKEEPING propose, organise et exécute ses prestations de
@@ -348,31 +278,21 @@
       professionnels.
     </p>
 
-
-    <!-- =========================
-         ARTICLE 3
-         ========================= -->
-
-    <h2>Article 3 - Prestations proposées</h2>
-
+    <h2 id="art3">Article 3 — Prestations proposées</h2>
     <p>
       ÔME HOUSEKEEPING propose les prestations suivantes, réalisées au
       domicile du client ou dans le bien confié, dans les zones Pays Basque
       et Sud des Landes :
     </p>
 
-
     <h3>Formule Essentielle</h3>
-
     <p>
       Entretien régulier du domicile (ménage courant, dépoussiérage,
       nettoyage des surfaces, aspiration, lavage des sols). Destinée aux
       particuliers dans le cadre des Services à la Personne.
     </p>
 
-
     <h3>Formule Grand Large</h3>
-
     <p>
       Nettoyage approfondi du domicile (grand ménage de printemps, nettoyage
       complet pièce par pièce incluant les zones habituellement non traitées
@@ -380,9 +300,7 @@
       professionnels.
     </p>
 
-
     <h3>Formule LCD (Locations de Courte Durée)</h3>
-
     <p>
       Prestation de remise en état entre deux locations pour les propriétaires
       Airbnb et plateformes équivalentes, incluant nettoyage complet,
@@ -391,9 +309,7 @@
       particuliers qu'aux gestionnaires et conciergeries professionnelles.
     </p>
 
-
-    <h3>Nettoyage de fin de bail / Remise en état</h3>
-
+    <h3>Formule Fin de bail / Remise en état</h3>
     <p>
       Nettoyage complet et approfondi du logement à la remise des clés,
       destiné à satisfaire aux exigences de l'état des lieux de sortie.
@@ -401,144 +317,102 @@
       gestionnaires de biens).
     </p>
 
-
-    <h3>Service de repassage</h3>
-
+    <h3>Formule Repassage</h3>
     <p>
       Pliage et repassage du linge de maison et des vêtements. Destiné aux
-      particuliers dans le cadre des Services à la Personne, et aux
-      professionnels (Gestion du linge de maison).
+      particuliers dans le cadre des Services à la Personne.
     </p>
 
+    <h3>Formule Gestion du linge</h3>
+    <p>
+      Prise en charge du linge de maison : Collecte, traitement, repassage, pliage et livraison du linge de maison. Destiné aux
+      particuliers et aux professionnels. Cette prestation n'est pas éligible au crédit d'impot.
+    </p>
 
-    <h3>Club ÔME — Offre complémentaire pour les particuliers</h3>
-
+    <h3>Club ÔME - Offre complémentaire pour les particuliers</h3>
     <p>
       Le <strong>Club ÔME</strong> est une offre complémentaire réservée aux
       clients particuliers bénéficiant d'un abonnement à la
       <strong>Formule Essentielle</strong> à raison de quatre passages par
       mois, soit un passage par semaine, avec un engagement contractuel de
-      12 mois.
+      12 mois. L'offre ouvre droit à la <strong>Formule Repassage</strong> et à la <strong>Formule Gestion du linge</strong> indépendemment l'une de l'autre.
     </p>
-
-    <p>
-      L'offre Club ÔME comprend :
-    </p>
-
+    <p>L'offre Club ÔME comprend :</p>
     <ul>
       <li>
-        l'accès à un service de gestion externalisée du linge de maison via
-        <strong>IMPEKKABLE</strong>, prestataire de blanchisserie distinct du
-        service de repassage proposé par ÔME HOUSEKEEPING ;
-      </li>
-
-      <li>
-        une réduction de <strong>10 %</strong> sur les prestations de la
-        Formule Essentielle, y compris le repassage lorsqu'il est commandé
-        dans ce cadre, sous réserve de l'éligibilité de la prestation au
-        crédit d'impôt applicable aux Services à la Personne.
+        l'accès à un service de gestion du linge de maison et/ou à la formule de repassage proposé par ÔME HOUSEKEEPING.
       </li>
     </ul>
-
+   
     <p>
       La gestion du linge externalisée peut faire l'objet d'une facturation
       distincte. Les tarifs applicables sont ceux communiqués au client au
       moment de la commande et peuvent varier selon les articles confiés.
     </p>
-
     <p>
-      Le traitement du linge externalisé est assuré par
-      <strong>IMPEKKABLE</strong>. Le délai de traitement est indicativement
-      d'environ six jours ouvrés. Il est recommandé de disposer d'au moins
-      trois jeux de linge afin de permettre la rotation nécessaire pendant
-      le traitement.
+      Le traitement du linge externalisé est assuré dans un délai de traitement indicatif
+      d'environ six jours ouvrés.
     </p>
-
     <p>
       La facturation des prestations et services relevant du Club ÔME est
       réalisée via les outils de facturation utilisés par ÔME HOUSEKEEPING.
     </p>
-
     <p>
-      En cas de rupture anticipée de l'engagement de 12 mois dans les
-      conditions prévues au contrat, le client perdra le bénéfice de la
-      réduction accordée dans le cadre du Club ÔME. Les sommes correspondant
-      aux réductions dont il a bénéficié depuis le début de son engagement
-      feront alors l'objet d'une régularisation conformément aux conditions
-      de l'abonnement.
+      En cas de rupture anticipée de l'engagement de 12 mois, les conditions
+      de résiliation applicables sont celles prévues au contrat et à
+      l'article 10.
     </p>
-
     <p>
       Avant l'échéance de l'engagement, ÔME HOUSEKEEPING adresse au client
       un rappel environ deux mois et demi avant la date concernée afin de
-      lui permettre d'anticiper les éventuelles démarches relatives à la
-      poursuite ou à l'arrêt de son engagement.
+      lui permettre d'anticiper les démarches relatives à la poursuite ou
+      à l'arrêt de son engagement.
     </p>
 
-
-    <h3>
-      Club ÔME Pro — Offre professionnelle Gestion du linge + Ménage de
-      location courte durée
-    </h3>
-
+    <h3>Club ÔME Pro - Offre professionnelle ménage LCD + Gestion du linge</h3>
     <p>
       Le <strong>Club ÔME Pro</strong> est une offre commerciale destinée aux
       propriétaires et gestionnaires de biens proposés en location courte
-      durée, notamment via Airbnb par des propriétaires, agences immobilières,
-      gîtes ou conciergeries, déjà clients de la
-      <strong>Formule LCD</strong>.
+      durée, notamment via Airbnb, agences immobilières, gîtes ou
+      conciergeries, déjà clients de la <strong>Formule LCD</strong>.
     </p>
-
-    <p>
-      L'offre Club ÔME Pro permet de combiner :
-    </p>
-
+    <p>L'offre Club ÔME Pro permet de combiner :</p>
     <ul>
-      <li>
-        la prestation de ménage entre deux réservations relevant de la
-        Formule LCD ;
-      </li>
-
-      <li>
-        la gestion externalisée du linge via
-        <strong>IMPEKKABLE</strong>.
-      </li>
+      <li>la prestation de ménage entre deux réservations relevant de la Formule LCD ;</li>
+      <li>la Formule Gestion du linge.</li> 
+      
+      <p>Il est recommandén pour les gestionnaire de location courte durée, de disposer d'au moins
+      trois jeux de linge de maison afin de permettre une rotation nécessaire pendant
+      le traitement.</p>
     </ul>
-
     <p>
-      Le Club ÔME Pro est une offre
+      Le Club ÔME Pro est une proposition commerciale
       <strong>à la carte, sans engagement de durée et sans abonnement</strong>.
       Les prestations sont facturées à l'acte selon les conditions précisées
       dans le devis accepté par le client professionnel.
     </p>
-
-    <p>
-      Les prestations relevant du Club ÔME Pro sont facturées via
-      <strong>JUMP</strong> et soumises à la TVA au taux applicable,
-      actuellement de <strong>20 %</strong>.
-    </p>
-
+    <div class="info">
+      Les prestations relevant du Club ÔME Pro ne bénéficient pas du crédit
+      d'impôt Services à la Personne. Le régime de facturation et, le cas
+      échéant, de TVA applicable est celui indiqué sur le devis et la facture.
+      En cas de contradiction, le devis accepté et la facture prévalent sur
+      le présent article.
+    </div>
     <p>
       Les conditions tarifaires définitives applicables au client professionnel
       figurent dans le devis accepté avant l'exécution de la prestation.
     </p>
 
-
-    <!-- =========================
-         ARTICLE 4
-         ========================= -->
-
-    <h2>Article 4 - Zone d'intervention</h2>
-
+    <h2 id="art4">Article 4 — Zone d'intervention</h2>
     <p>
       ÔME HOUSEKEEPING intervient dans un
       <strong>rayon de 30 kilomètres autour de Bayonne</strong>,
-      couvrant le Pays Basque et le Sud des Landes.
+      couvrant notamment le Pays Basque et le sud des Landes.
     </p>
+    <p>La liste ci-dessous est indicative et non exhaustive.</p>
 
     <h3>Communes du Pays Basque</h3>
-
-    <ul>
+    <ul class="communes">
       <li>Bayonne</li>
       <li>Biarritz</li>
       <li>Anglet</li>
@@ -561,11 +435,11 @@
       <li>Bassussarry</li>
       <li>Lahonce</li>
       <li>Urt</li>
+      <li>Urcuit</li>
     </ul>
 
     <h3>Communes du Sud des Landes</h3>
-
-    <ul>
+    <ul class="communes">
       <li>Tarnos</li>
       <li>Ondres</li>
       <li>Labenne</li>
@@ -577,25 +451,17 @@
       <li>Saint-Martin-de-Seignanx</li>
     </ul>
 
-
-    <!-- =========================
-         ARTICLE 5
-         ========================= -->
-
-    <h2>Article 5 - Devis et formation du contrat</h2>
-
+    <h2 id="art5">Article 5 — Devis et formation du contrat</h2>
     <p>
       Toute prestation fait l'objet d'un devis préalable, gratuit et sans
-      engagement, établi après visite du bien ou échange téléphonique/formulaire
-      selon la nature de la prestation.
+      engagement, établi après visite du bien ou échange
+      téléphonique / formulaire selon la nature de la prestation.
     </p>
-
     <p>
       Le devis précise : la nature des prestations, la durée estimée, le tarif
       horaire ou forfaitaire applicable, la date et l'heure d'intervention
       prévues, ainsi que les modalités de paiement.
     </p>
-
     <p>
       Le contrat est formé à la double condition de la signature
       (ou acceptation électronique) du devis par le client et de la
@@ -603,24 +469,21 @@
       n'est engagée sans accord formalisé.
     </p>
 
-
-    <!-- =========================
-         ARTICLE 6
-         ========================= -->
-
-    <h2>Article 6 - Tarifs</h2>
-
+    <h2 id="art6">Article 6 — Tarifs</h2>
     <p>
       Les tarifs applicables sont ceux indiqués sur le devis accepté par le
-      client. Ils sont exprimés en euros TTC. En tant qu'auto-entrepreneur,
-      ÔME HOUSEKEEPING n'est pas assujetti à la TVA (article 293 B du Code
-      Général des Impôts).
+      client. Ils sont exprimés en euros. Sauf mention contraire sur le devis
+      ou la facture, ÔME HOUSEKEEPING, en tant qu'auto-entrepreneur, n'est
+      pas assujetti à la TVA (article 293 B du Code général des impôts) :
+      les prix sont alors TTC, TVA non applicable.
+    </p>
+    <p>
+      Lorsque certaines prestations (notamment Club ÔME Pro) sont soumises à
+      un régime de TVA différent de la franchise en base, ce régime est
+      expressément indiqué sur le devis et la facture correspondants.
     </p>
 
-    <h3>
-      Clients particuliers — Avance Immédiate de Crédit d'Impôt (URSSAF)
-    </h3>
-
+    <h3>Clients particuliers - Avance Immédiate de crédit d'impôt (URSSAF)</h3>
     <p>
       Dans le cadre du dispositif Services à la Personne, les particuliers
       éligibles bénéficient d'un crédit d'impôt de 50 % sur le montant des
@@ -628,26 +491,21 @@
       Immédiate, permettant de déduire ce crédit directement au moment du
       paiement, sans attendre la déclaration fiscale annuelle.
     </p>
-
-    <p>
-      <strong>
-        Le prix avant crédit d'impôt correspond au tarif de la prestation.
-        Le prix après crédit d'impôt correspond au reste à charge théorique
-        de 50 % pour un client éligible bénéficiant de l'Avance Immédiate.
-      </strong>
-      Le dispositif s'applique uniquement aux prestations réalisées au
-      domicile du particulier dans le cadre SAP.
-    </p>
+    <div class="info">
+      <strong>Le prix avant crédit d'impôt</strong> correspond au tarif de la
+      prestation. <strong>Le prix après crédit d'impôt</strong> correspond au
+      reste à charge théorique de 50 % pour un client éligible bénéficiant
+      de l'Avance Immédiate. Le dispositif s'applique uniquement aux
+      prestations réalisées au domicile du particulier dans le cadre SAP.
+    </div>
 
     <h3>Clients professionnels</h3>
-
     <p>
       Les prestations réalisées pour le compte de professionnels (agences
       immobilières, conciergeries, gestionnaires de locations) ne rentrent
       pas dans le cadre SAP et ne bénéficient pas du crédit d'impôt.
       Les tarifs sont ceux convenus dans le devis, sans avantage fiscal associé.
     </p>
-
     <p>
       ÔME HOUSEKEEPING se réserve le droit de modifier ses tarifs à tout
       moment. Les nouveaux tarifs s'appliquent aux prestations commandées
@@ -655,179 +513,132 @@
       déjà acceptés.
     </p>
 
-
-    <!-- =========================
-         ARTICLE 7
-         ========================= -->
-
-    <h2>Article 7 - Modalités de paiement</h2>
-
+    <h2 id="art7">Article 7 — Modalités de paiement</h2>
     <p>
       Le paiement est exigible à la fin de chaque prestation ou selon les
       modalités précisées dans le devis (prélèvement mensuel pour les
-      abonnements, acompte pour certaines prestations ponctuelles).
+      abonnements, et paiement sur service fait pour certaines prestations ponctuelles).
     </p>
-
     <p>
       Moyens de paiement acceptés : virement bancaire, paiement en ligne par
       carte bancaire via Stripe, espèces (dans les limites légales).
+      Lorsque le client particulier utilise l'<strong>Avance Immédiate</strong>,
+      le règlement de sa part s'effectue par virement ou carte ; les espèces
+      ne sont pas un mode de règlement de l'Avance Immédiate.
     </p>
 
     <h3>Clients professionnels</h3>
-
     <p>
       Un délai de paiement peut être convenu par écrit dans le devis, dans
       la limite de 30 jours à compter de la date de facturation conformément
-      à l'article L.441-10 du Code de commerce. En cas de retard de paiement,
+      à l'article L. 441-10 du Code de commerce. En cas de retard de paiement,
       des pénalités de retard sont applicables au taux légal en vigueur
-      (minimum 3 fois le taux d'intérêt légal), ainsi qu'une indemnité
+      (minimum trois fois le taux d'intérêt légal), ainsi qu'une indemnité
       forfaitaire pour frais de recouvrement de 40 €.
     </p>
 
     <h3>Clients particuliers</h3>
-
     <p>
       Le paiement est dû à l'issue de chaque prestation. En cas de retard,
       des pénalités de retard au taux légal en vigueur sont applicables
       après mise en demeure restée sans effet.
     </p>
 
-
-    <!-- =========================
-         ARTICLE 8
-         ========================= -->
-
-    <h2>Article 8 - Conditions d'exécution des prestations</h2>
-
+    <h2 id="art8">Article 8 — Conditions d'exécution des prestations</h2>
     <h3>Accès au bien</h3>
-
     <p>
       Le client s'engage à permettre l'accès au logement ou au bien à l'heure
       convenue, soit en étant présent, soit en remettant les clés ou codes
       d'accès nécessaires selon des modalités convenues entre les parties.
     </p>
-
     <h3>Conditions d'intervention</h3>
-
     <p>
       Le bien doit être dans un état permettant l'exécution normale de la
       prestation (accès libre aux espaces à nettoyer, eau courante et
       électricité disponibles). En cas de conditions rendant l'intervention
       impossible ou dangereuse, ÔME HOUSEKEEPING se réserve le droit
       d'interrompre ou de refuser la prestation, qui sera néanmoins facturée
-      à hauteur du déplacement.
+      à hauteur du déplacement. L'intervention de ÔME HOUSEKEEPING au domicle du client ne concerne pas le rangement ou le tri des effets personnels.
+
+      Pour les prestation de ménage pour les locations missionnés par des agences ou gestionnaire immobiliers, des exceptions de mise à disposition d'eau courante ou electricité peuvent être convenues par écrit dans le devis ou le contrat cadre.
     </p>
-
     <h3>Produits et matériels</h3>
-
     <p>
       ÔME HOUSEKEEPING apporte son propre matériel et ses produits écologiques.
-      Si le client souhaite que des produits spécifiques soient utilisés,
-      il doit en informer ÔME HOUSEKEEPING en amont et les mettre à disposition.
+     Aucuns autre produits ne sera utilisés durant la prestation. 
     </p>
-
     <h3>Animaux domestiques</h3>
-
     <p>
       Le client doit informer ÔME HOUSEKEEPING de la présence d'animaux
       domestiques. Ceux-ci doivent être sécurisés lors de l'intervention si
       leur présence est susceptible de gêner le déroulement de la prestation.
     </p>
 
-
-    <!-- =========================
-         ARTICLE 9
-         ========================= -->
-
-    <h2>Article 9 - Annulation et report</h2>
-
+    <h2 id="art9">Article 9 - Annulation et report</h2>
     <h3>Par le client particulier</h3>
-
     <p>
       Toute annulation ou demande de report doit être communiquée à
       ÔME HOUSEKEEPING au moins 48 heures avant l'intervention prévue,
-      par email ou téléphone. En deçà de ce délai, l'intervention sera
+      par email. En deçà de ce délai, l'intervention sera
       facturée à hauteur de 50 % du montant prévu. En cas d'absence sans
       prévenance, la prestation sera facturée intégralement.
     </p>
-
     <h3>Par le client professionnel</h3>
-
     <p>
       Les conditions d'annulation et de report sont celles convenues dans
       le devis ou le contrat cadre. À défaut de stipulation contraire,
       un préavis de 48 heures est requis. En cas d'annulation tardive ou
       d'absence, la prestation sera facturée intégralement.
     </p>
-
     <h3>Par ÔME HOUSEKEEPING</h3>
-
     <p>
       En cas d'empêchement (maladie, force majeure), ÔME HOUSEKEEPING
       s'engage à en informer le client dans les meilleurs délais et à
       proposer une date de report. Aucune pénalité ne s'applique dans ce cas.
     </p>
 
-
-    <!-- =========================
-         ARTICLE 10
-         ========================= -->
-
-    <h2>Article 10 - Abonnements et contrats récurrents</h2>
-
+    <h2 id="art10">Article 10 - Abonnements et contrats récurrents</h2>
     <p>
       ÔME HOUSEKEEPING propose des formules d'abonnement récurrentes
       (hebdomadaires, bimensuelles ou mensuelles), accessibles aux particuliers
       et aux professionnels.
     </p>
-
-    <h3>Abonnement annuel 12 mois</h3>
-
+    <h3>Abonnement annuel 12 mois (Club ÔME / Formule Essentielle)</h3>
     <p>
-      Le client bénéficie d'une réduction de 10 % sur l'ensemble des
-      prestations en contrepartie d'un engagement ferme de 12 mois.
-      En cas de résiliation anticipée avant le terme des 12 mois, la remise
-      de 10 % accordée sur toutes les prestations déjà réalisées depuis le
-      début du contrat sera intégralement récupérée et ajoutée à la dernière
-      facture émise. Le montant correspondant est calculé sur la base du
-      différentiel entre le tarif plein et le tarif réduit appliqué depuis
-      le début du contrat.
+      L'abonnement Club ÔME à la Formule Essentielle (quatre passages par mois)
+      comporte un engagement ferme de 12 mois. Aucune remise n'est accordée au titre de cet engagement. Les tarifs
+      applicables sont ceux du devis accepté. Les conditions de résiliation
+      anticipée sont celles prévues au contrat et au devis ; à défaut,
+      ÔME HOUSEKEEPING et le client s'entendent par écrit.
     </p>
-
     <p>
       Pour les clients professionnels, un contrat cadre peut être établi
       pour formaliser les conditions spécifiques (fréquence, tarifs, délais
       de paiement, conditions de résiliation).
     </p>
-
     <p>
       En cas d'absence répétée non signalée ou de refus d'accès au bien,
       ÔME HOUSEKEEPING se réserve le droit de mettre fin à l'abonnement
       sans préavis et sans remboursement.
     </p>
 
-
-    <!-- =========================
-         ARTICLE 11
-         ========================= -->
-
-    <h2>Article 11 - Responsabilité</h2>
-
+    <h2 id="art11">Article 11 - Responsabilité</h2>
     <p>
       ÔME HOUSEKEEPING est couvert par une assurance Responsabilité Civile
-      Professionnelle pour l'ensemble de ses interventions. En cas de dommage
+      Professionnelle souscrite auprès d'<strong>Acheel</strong>
+      (contrat n°&nbsp;<code>RCP_00000000000000063523</code>, attestation en vigueur
+      du 7&nbsp;septembre&nbsp;2026 au 6&nbsp;septembre&nbsp;2027) pour l'ensemble de ses interventions.
+      En cas de dommage
       causé par une faute avérée lors d'une prestation, le client doit le
       signaler dans un délai de <strong>72 heures suivant l'intervention</strong>
       par email avec photos à l'appui.
     </p>
-
     <p>
-      La responsabilité d'ÔME HOUSEKEEPING ne saurait être engagée pour des
+      La responsabilité de ÔME HOUSEKEEPING ne saurait être engagée pour des
       dommages résultant d'un défaut préexistant non signalé (revêtements
       fragiles, installations défectueuses, mobilier en mauvais état),
       d'une utilisation impropre du bien ou de cas de force majeure.
     </p>
-
     <p>
       ÔME HOUSEKEEPING ne peut être tenu responsable de la perte ou du vol
       d'objets de valeur laissés accessibles lors des interventions. Il est
@@ -835,16 +646,10 @@
       chaque intervention.
     </p>
 
-
-    <!-- =========================
-         ARTICLE 12
-         ========================= -->
-
-    <h2>Article 12 - Discrétion et confidentialité</h2>
-
+    <h2 id="art12">Article 12 - Discrétion et confidentialité</h2>
     <p>
-      Le personnel d'ÔME HOUSEKEEPING est soumis à une obligation de
-      discrétion absolue concernant les informations et éléments auxquels
+      Le personnel de ÔME HOUSEKEEPING est soumis à une obligation de
+      discrétion concernant les informations et éléments auxquels
       il peut avoir accès lors des interventions. Il s'engage à ne divulguer
       aucune information relative à la vie privée des occupants, à
       l'organisation du bien ou à toute information confidentielle portée
@@ -852,92 +657,53 @@
       pour des clients professionnels.
     </p>
 
-
-    <!-- =========================
-         ARTICLE 13
-         ========================= -->
-
-    <h2>Article 13 - Droit de rétractation</h2>
-
+    <h2 id="art13">Article 13 - Droit de rétractation</h2>
     <h3>Clients particuliers uniquement</h3>
-
     <p>
-      Conformément à l'article L.221-18 du Code de la consommation, le client
+      Conformément à l'article L. 221-18 du Code de la consommation, le client
       particulier dispose d'un délai légal de <strong>14 jours</strong>
       à compter de la conclusion du contrat pour exercer son droit de
       rétractation, sans avoir à justifier de motifs.
     </p>
-
     <p>
       Si le client demande expressément que la prestation commence avant
       l'expiration de ce délai, il reconnaît qu'en cas de rétractation,
       il peut être redevable du montant correspondant au service déjà exécuté,
-      dans les conditions prévues par l'article L.221-25 du Code de la
+      dans les conditions prévues par l'article L. 221-25 du Code de la
       consommation. Lorsque la prestation est entièrement exécutée avant
       la fin du délai et que les conditions légales sont réunies, le droit
       de rétractation peut prendre fin conformément aux dispositions
       applicables.
     </p>
-
     <p>
       Pour exercer ce droit, le client peut adresser une déclaration non
       équivoque par email à
-      <a href="mailto:contact@ome-housekeeping.fr">
-        contact@ome-housekeeping.fr
-      </a>.
+      <a href="mailto:contact@ome-housekeeping.fr">contact@ome-housekeeping.fr</a>.
     </p>
-
     <h3>Clients professionnels</h3>
-
     <p>
       Le droit de rétractation prévu par le Code de la consommation ne
       s'applique pas aux contrats conclus entre professionnels. Les conditions
-      d'annulation sont celles prévues à l'Article 9.
+      d'annulation sont celles prévues à l'article 9.
     </p>
 
-
-    <!-- =========================
-         ARTICLE 14
-         ========================= -->
-
-    <h2>Article 14 - Médiation et règlement des litiges</h2>
-
+    <h2 id="art14">Article 14 - Médiation et règlement des litiges</h2>
     <h3>Pour les clients particuliers</h3>
-
     <p>
       En cas de litige, le client peut recourir gratuitement à la médiation
       de la consommation. ÔME HOUSEKEEPING a désigné le médiateur suivant :
     </p>
-
     <p>
-      <strong>
-        CM2C - Centre de Médiation de la Consommation de Conciliateurs de Justice
-      </strong><br>
-
-      Site :
-      <a
-        href="https://www.cm2c.net/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        www.cm2c.net
-      </a><br>
-
-      Email :
-      <a href="mailto:cm2c@cm2c.net">
-        cm2c@cm2c.net
-      </a><br>
-
-      Adresse : 14 rue Saint-Jean - 75017 Paris
+      <strong>CM2C — Centre de Médiation de la Consommation de Conciliateurs de Justice</strong><br>
+      Site : <a href="https://www.cm2c.net/" target="_blank" rel="noopener noreferrer">www.cm2c.net</a><br>
+      Email : <a href="mailto:cm2c@cm2c.net">cm2c@cm2c.net</a><br>
+      Adresse : 14 rue Saint-Jean — 75017 Paris
     </p>
-
     <p>
       Le recours à la médiation est possible après avoir tenté de résoudre
       le litige directement avec ÔME HOUSEKEEPING.
     </p>
-
     <h3>Pour les clients professionnels</h3>
-
     <p>
       En cas de litige entre professionnels, les parties s'engagent à
       rechercher une solution amiable avant tout recours judiciaire.
@@ -945,26 +711,14 @@
       sera porté devant les tribunaux compétents du ressort de Bayonne.
     </p>
 
-
-    <!-- =========================
-         ARTICLE 15
-         ========================= -->
-
-    <h2>Article 15 - Droit applicable</h2>
-
+    <h2 id="art15">Article 15 — Droit applicable</h2>
     <p>
       Les présentes CGV sont soumises au droit français. Tout litige relatif
       à leur interprétation ou à leur exécution sera soumis aux juridictions
       françaises compétentes.
     </p>
 
-
-    <!-- =========================
-         ARTICLE 16
-         ========================= -->
-
-    <h2>Article 16 - Dispositions diverses</h2>
-
+    <h2 id="art16">Article 16 — Dispositions diverses</h2>
     <p>
       Si l'une des clauses des présentes CGV était déclarée nulle ou
       inapplicable, les autres clauses resteraient pleinement en vigueur.
@@ -972,19 +726,10 @@
       des CGV ne vaut pas renonciation à cette clause.
     </p>
 
-
-    <!-- =========================
-         FOOTER
-         ========================= -->
-
     <footer>
       ÔME HOUSEKEEPING · Bayonne, Pays Basque, France ·
-      <a href="mailto:contact@ome-housekeeping.fr">
-        contact@ome-housekeeping.fr
-      </a>
+      <a href="mailto:contact@ome-housekeeping.fr">contact@ome-housekeeping.fr</a>
     </footer>
-
   </main>
-
 </body>
 </html>
